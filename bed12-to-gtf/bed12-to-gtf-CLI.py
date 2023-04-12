@@ -22,7 +22,7 @@ try:
       with open(args.output, "a") as f:  
          for line in open(args.chrom):
             fields = line.strip().split("\t")
-            print(fields[0], ".", "contig","1",str(fields[1]), ".", "+", ".", "ID=%s" % fields[0], file = f)
+            print(fields[0], ".", "contig","1",str(fields[1]), ".", "+", ".", "ID=%s" % fields[0], file = f, sep='\t')
 
          for line in open(args.bed):
             fields = line.strip().split("\t")
