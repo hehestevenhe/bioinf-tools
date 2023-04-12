@@ -22,7 +22,7 @@ def program():
          with open(output+".gtf", "a") as f:  
             for line in open(chrom_tsv):
                fields = line.strip().split("\t")
-               print(fields[0], ".", "contig","1",str(fields[1]), ".", "+", ".", "ID=%s" % fields[0], file = f)
+               print(fields[0], ".", "contig","1",str(fields[1]), ".", "+", ".", "ID=%s" % fields[0], file = f, sep= '\t')
          
             for line in open(bed12):
                fields = line.strip().split("\t")
